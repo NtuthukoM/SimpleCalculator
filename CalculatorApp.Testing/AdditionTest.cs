@@ -29,5 +29,24 @@ namespace CalculatorApp.Testing
             Assert.AreEqual(sum, result, strMessage);
 
         }
+
+        [TestMethod]
+        [DataRow(5.5,2.3,7.8)]
+        public void TestDouble(double num1, double num2, double sum)
+        {
+            //arrange:
+            double result = 0;
+
+            Addition add = new Addition();
+
+            //act:
+            result = add.Calculate(num1, num2);
+
+            //assert:
+            string strMessage = string.Format("Input: {0} + {1} = {2}. Expected: {3}",
+                num1, num2, result, sum
+                );
+            Assert.AreEqual(sum, result, strMessage);
+        }
     }
 }

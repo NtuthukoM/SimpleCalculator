@@ -10,7 +10,7 @@ namespace CalculatorApp.Core
     {
         public double Calculate(double Num1, double Num2)
         {
-            throw new NotImplementedException();
+            return Num1 + Num2;
         }
 
         public int Calculate(int Num1, int Num2)
