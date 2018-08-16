@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AdditionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubtractionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CalculatorApp.Core\CalculatorApp.Core.csproj">
