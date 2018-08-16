@@ -99,7 +99,10 @@ function CalculatorVM() {
         var text = e.target.innerText;
         var display = '';
         if (self.CalcOpp == '') {
-            self.Num1 += text;
+            if (self.Num1 == '0')
+                self.Num1 = text;
+            else
+                self.Num1 += text;
             display = self.Num1;
 
         } else {
