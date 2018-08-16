@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CalculatorApp.Core
 {
-    public class Class1
+    public interface ICalculator
     {
+        int Calculate(int Num1, int Num2);
+        double Calculate(double Num1, double Num2);
     }
 }
