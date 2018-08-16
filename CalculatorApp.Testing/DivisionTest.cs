@@ -21,7 +21,7 @@ namespace CalculatorApp.Testing
             result = obj.Calculate(num1, num2);
 
             //assert:
-            string strMessage = string.Format("Input: {0} - {1} = {2}. Expected: {3}",
+            string strMessage = string.Format("Input: {0} / {1} = {2}. Expected: {3}",
                 num1, num2, result, expected
                 );
             Assert.AreEqual(expected, result, strMessage);
@@ -40,7 +40,7 @@ namespace CalculatorApp.Testing
             result = obj.Calculate(num1, num2);
 
             //assert:
-            string strMessage = string.Format("Input: {0} - {1} = {2}. Expected: {3}",
+            string strMessage = string.Format("Input: {0} / {1} = {2}. Expected: {3}",
                 num1, num2, result, expected
                 );
             Assert.AreEqual(expected, result, strMessage);
