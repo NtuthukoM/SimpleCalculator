@@ -22,16 +22,18 @@ namespace CalculatorApp.Web.Controllers
             try
             {
                 //Double
-                if(model.Num1.IndexOf(".") > -1 || model.Num2.IndexOf(".") > -1)
+                if(model.Num1.IndexOf(".") > -1 || model.Num2.IndexOf(".") > -1 || model.CalcOpp == "/")
                 {
-                    double num1 =0, num2=0, result;
-                    result = calc.Calculate(num1, num2);
+                    double num1 = double.Parse(model.Num1);
+                    double num2 = double.Parse(model.Num2);
+                    double result = calc.Calculate(num1, num2);
                     model.Answer = result.ToString();
                 }
                 else //Int
                 {
-                    int num1 = 0, num2 = 0, result;
-                    result = calc.Calculate(num1, num2);
+                    int num1 = int.Parse(model.Num1);
+                    int num2 = int.Parse(model.Num2);
+                    int result = calc.Calculate(num1, num2);
                     model.Answer = result.ToString();
                 }
             }

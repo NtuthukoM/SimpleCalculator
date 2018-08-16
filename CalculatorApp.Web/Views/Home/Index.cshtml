@@ -5,6 +5,44 @@
 
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
-        <h2>Calculator</h2>
+
+        <div class="calc-frame animated tada">
+            <h5><i class="fa fa-calculator"></i> Calculator</h5>
+            <div class="display text-right" data-bind="text:DisplayText">
+
+            </div>
+            <div class="buttons">
+                <button class="btn btn-default" data-bind="click:BackSpace"> <small><i class="fa fa-arrow-left"></i></small></button>
+                <button class="btn btn-default" data-bind="click:Clear"><small>ce</small></button>
+                <button class="btn btn-default" data-bind="click:ClearAll">c</button>
+                <button class="btn btn-default" data-bind="click:Negate">&#177;</button>
+
+                <button class="btn btn-default" data-bind="click:UpdateNum">7</button>
+                <button class="btn btn-default" data-bind="click:UpdateNum">8</button>
+                <button class="btn btn-default" data-bind="click:UpdateNum">9</button>
+                <button class="btn btn-default" data-bind="click:SetOpp">/</button>
+
+                <button class="btn btn-default" data-bind="click:UpdateNum">4</button>
+                <button class="btn btn-default" data-bind="click:UpdateNum">5</button>
+                <button class="btn btn-default" data-bind="click:UpdateNum">6</button>
+                <button class="btn btn-default" data-bind="click:SetOpp">*</button>
+
+                <button class="btn btn-default" data-bind="click:UpdateNum">1</button>
+                <button class="btn btn-default" data-bind="click:UpdateNum">2</button>
+                <button class="btn btn-default" data-bind="click:UpdateNum">3</button>
+                <button class="btn btn-default" data-bind="click:SetOpp">-</button>
+
+                <button class="btn btn-default" data-bind="click:UpdateNum">0</button>
+                <button class="btn btn-default" data-bind="click:AddPeriod">.</button>
+                <button class="btn btn-success" data-bind="click:Calculate, enable:CanCompute()">=</button>
+                <button class="btn btn-default" data-bind="click:SetOpp">+</button>
+            </div>
+        </div>
     </div>
 </div>
+
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/knockout")
+}
